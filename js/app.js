@@ -1,5 +1,5 @@
 //importar 
-import { obtenerClientes } from "./API.js";
+import { obtenerClientes, eliminarCliente } from "./API.js";
 //IFEE
 (function() {
     //variable donde se mostrara el listado de clientes
@@ -7,6 +7,8 @@ import { obtenerClientes } from "./API.js";
     
     //listeners
     document.addEventListener('DOMContentLoaded', mostrarClientes);
+    //añadir un listener a LISTADO
+    listado.addEventListener('click', confirmarEliminar);
     
     //funcion para mostrar los clientes
     //async await
@@ -42,6 +44,24 @@ import { obtenerClientes } from "./API.js";
             listado.appendChild( row );
 
         });
+    }
+    //funcion para eliminar registro
+    function confirmarEliminar(e) {
+        e.preventDefault();
+        //verificar si hace click en la CLASE "eliminar"
+        if ( e.target.classList.contains('eliminar') ) {
+            //id a eliminar
+            // e.target.dataset.cliente = e.target.getAttribute('data-cliente')
+            const clienteId = parseInt( e.target.dataset.cliente );
+            //confirmar si el usuario quiere eliminar el registro
+            const confirmar = confirm('¿Deseas eliminar este registro?');
+            //si confirmar = true
+            if ( confirmar ) {
+                //llamamos a funcion para eliminar el registro de cliente
+                //y pasamo como arguemnto el ID del cliente
+                eliminarCliente(clienteId);
+            }
+        }
     }
 
 })();
