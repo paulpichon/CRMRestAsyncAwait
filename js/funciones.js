@@ -28,3 +28,13 @@ export function mostrarAlerta( mensaje ) {
     }
 
 }
+
+//funcion para validar los input
+export function validar( obj ) {
+    //leer los valores del objeto
+    //.every() revisa una condicion en cada elemento
+    //esta linea retorna true/false
+    return !Object.values( obj ).every( input => input !== '' );
+
+
+}

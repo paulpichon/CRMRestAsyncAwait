@@ -1,16 +1,16 @@
 {
   "clientes": [
     {
-      "nombre": "Pichon",
+      "nombre": "Paul el jefe",
       "email": "paul10_barca@hotmail.com",
       "telefono": "2225642359",
       "empresa": "aquiestoy",
       "id": 29
     },
     {
-      "nombre": "Magaly",
+      "nombre": "Raquel Magaly",
       "email": "magaly@aquiestoy.mx",
-      "telefono": "2222097288",
+      "telefono": "2225214696",
       "empresa": "AquiEstoy",
       "id": 30
     }

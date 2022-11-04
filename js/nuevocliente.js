@@ -1,6 +1,6 @@
 //importar del archivo funciones.js
-//la funcion mostrarAlerta
-import { mostrarAlerta } from "./funciones.js";
+//la funcion mostrarAlerta y validar
+import { mostrarAlerta, validar } from "./funciones.js";
 //funcion para crear nuevo cliente
 import { nuevoCliente } from "./API.js";
 
@@ -53,16 +53,5 @@ import { nuevoCliente } from "./API.js";
         
 
     }
-
-    //funcion para validar los input
-    function validar( obj ) {
-        //leer los valores del objeto
-        //.every() revisa una condicion en cada elemento
-        //esta linea retorna true/false
-        return !Object.values( obj ).every( input => input !== '' );
-
-
-    }
-
 
 })();
