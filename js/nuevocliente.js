@@ -1,3 +1,7 @@
+//importar del archivo funciones.js
+//la funcion mostrarAlerta
+import { mostrarAlerta } from "./funciones.js";
+
 //IIFE
 (function() {
     //variable para formulario
@@ -36,7 +40,7 @@
         //pasamos como argumento el objeto CLIENTE
         if ( validar( cliente ) ) {
             //mostrar mensaje
-            console.log("todos los campos son obligatorios");
+            mostrarAlerta("todos los campos son obligatorios");
             //retornamos para que no se siga ejecutando codigo
             return;
         }
