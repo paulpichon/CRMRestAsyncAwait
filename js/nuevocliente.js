@@ -1,6 +1,8 @@
 //importar del archivo funciones.js
 //la funcion mostrarAlerta
 import { mostrarAlerta } from "./funciones.js";
+//funcion para crear nuevo cliente
+import { nuevoCliente } from "./API.js";
 
 //IIFE
 (function() {
@@ -45,7 +47,9 @@ import { mostrarAlerta } from "./funciones.js";
             return;
         }
 
-        console.log('se se paso la validacion');
+        //llamar funcion para crear un nuevo cliente
+        //se pasa como arguemnto el objeto cliente
+        nuevoCliente( cliente );
         
 
     }
