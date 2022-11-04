@@ -59,3 +59,18 @@ export const eliminarCliente = async id => {
         console.log( error );
     }
 }
+//funcion para obtener cliente por su ID
+export const obtenerCliente = async id => {
+    //try catch
+    try {
+        //resultado 
+        const resultado = await fetch( `${ url }/${id}` );
+        //
+        const cliente = await resultado.json();
+        //retornamos el cliente
+        return cliente;
+
+    } catch (error) {
+        console.log( error );
+    }
+}
