@@ -2,6 +2,7 @@
 const url = 'http://localhost:4000/clientes';
 
 //ASYNC AWAIT
+//para crear un nuevo cliente
 export const nuevoCliente = async cliente => {
     //consultar la API con ASYNC AWAIT
     try {
@@ -25,4 +26,21 @@ export const nuevoCliente = async cliente => {
         console.log( error );
     }
 
+}
+//funcion para obtener informacion de todos los cleintes
+export const obtenerClientes = async () => {
+    //try cath
+    try {
+        //fetch
+        //await
+        const resultado = await fetch( url );
+        //await
+        const clientes = await resultado.json();
+        //retornamos los clientes
+        return clientes;
+
+
+    } catch (error) {
+        console.log( error );
+    }
 }
